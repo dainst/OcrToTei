@@ -25,6 +25,10 @@ public class App
 {
     public static void main( String[] args )
     {
+    	if(args.length != 2) {
+    		System.out.println("Usage: java -jar OcrToTei-0.0.*-SNAPSHOT-jar-with-dependencies.jar dirPathToPdf TeiDocumentPath");
+    		System.exit(1);
+    	}
         System.out.println( "Starting OrcToTei" );
         String directorypath = args[0];
         String teiDocumentPath = args[1];
