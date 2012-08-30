@@ -20,8 +20,10 @@ public class PdfOcrReaderTest extends TestCase {
 	public void testPdfOcrReader() {
 		PdfOcrReader pdfOcrReader = new PdfOcrReader();
 		try {
-			pdfOcrReader.readFile("/Users/istari/Documents/OcrTestDaten/165487/0012.pdf");
+			//pdfOcrReader.readFile("/Users/clemens/Documents/OCR_Arachne/880098/1.Braun_an_Gerhard1832-35Teil150.pdf");
+			pdfOcrReader.readFile("/Users/clemens/Documents/OCR_Arachne/156526/0008.pdf");
 			pdfOcrReader.readOcrText();
+			System.out.println(pdfOcrReader.getLineList());
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
